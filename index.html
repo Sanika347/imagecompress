@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our collection of online tools for image compression, PDF editing, and more. Simplify your workflow with our easy-to-use tools.">
+    <meta name="keywords" content="image tools, PDF tools, online tools, image compression, PDF editor">
+    <meta name="author" content="Sanika Surashe">
+    <title>Home - Online Tools</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+
+        .hero .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .hero .btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Tools Grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+        }
+
+        .tool-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .tool-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .tool-card .content {
+            padding: 20px;
+        }
+
+        .tool-card h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .tool-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .tool-card .btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .tool-card .btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 20px;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .tools-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .tool-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .tool-card p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Online Tools</h1>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Simplify Your Workflow</h2>
+        <p>Explore our collection of online tools for image compression, PDF editing, and more.</p>
+        <a href="#tools" class="btn">Get Started</a>
+    </section>
+
+    <!-- Tools Grid -->
+    <section id="tools" class="tools-grid">
+        <!-- Image Compression Tool -->
+       <a href="/imagecompress/img.html" class="tool-card-link">
+    <div class="tool-card">
+        <img src="image-compression.jpg" alt="Image Compression">
+        <div class="content">
+            <h3>Image Compression</h3>
+            <p>Compress and optimize your images for web use with adjustable compression levels.</p>
+            <span class="btn">Use Tool</span>
+        </div>
+      </div>
+       </a>
+
+        <!-- PDF Editor Tool -->
+        <div class="tool-card">
+            <img src="pdf-editor.jpg" alt="PDF Editor">
+            <div class="content">
+                <h3>PDF Editor</h3>
+                <p>Edit, merge, and compress PDF files with ease.</p>
+                <a href="/pdf-editor" class="btn">Use Tool</a>
+            </div>
+        </div>
+
+        <!-- Add more tools here -->
+        <div class="tool-card">
+            <img src="image-converter.jpg" alt="Image Converter">
+            <div class="content">
+                <h3>Image Converter</h3>
+                <p>Convert images to different formats like JPG, PNG, and more.</p>
+                <a href="/image-converter" class="btn">Use Tool</a>
+            </div>
+        </div>
+
+        <div class="tool-card">
+            <img src="pdf-converter.jpg" alt="PDF Converter">
+            <div class="content">
+                <h3>PDF Converter</h3>
+                <p>Convert PDFs to Word, Excel, or other formats.</p>
+                <a href="/pdf-converter" class="btn">Use Tool</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Online Tools. All rights reserved.</p>
+    </footer>
+</body>
+</html>
