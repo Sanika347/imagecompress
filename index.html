@@ -15,7 +15,7 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #f0f2f5;
             color: #333;
         }
 
@@ -26,7 +26,7 @@
 
         /* Header */
         header {
-            background-color: #4CAF50;
+            background-color: #1e3a8a;
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -40,41 +40,43 @@
 
         /* Hero Section */
         .hero {
-            background: url('hero-bg.jpg') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?technology,abstract') no-repeat center center/cover;
             color: white;
             text-align: center;
-            padding: 100px 20px;
+            padding: 120px 20px;
         }
 
         .hero h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin: 0;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             margin: 20px 0;
         }
 
         .hero .btn {
-            background-color: #4CAF50;
+            background-color: #ff9800;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 5px;
-            font-size: 1rem;
+            font-size: 1.2rem;
             transition: background-color 0.3s;
         }
 
         .hero .btn:hover {
-            background-color: #45a049;
+            background-color: #e68900;
         }
 
         /* Tools Grid */
         .tools-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 40px 20px;
+            gap: 30px;
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: auto;
         }
 
         .tool-card {
@@ -83,6 +85,7 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
         }
 
         .tool-card:hover {
@@ -92,7 +95,7 @@
 
         .tool-card img {
             width: 100%;
-            height: 150px;
+            height: 180px;
             object-fit: cover;
         }
 
@@ -102,7 +105,7 @@
 
         .tool-card h3 {
             margin: 0;
-            font-size: 1.5rem;
+            font-size: 1.7rem;
         }
 
         .tool-card p {
@@ -112,17 +115,17 @@
 
         .tool-card .btn {
             display: inline-block;
-            background-color: #4CAF50;
+            background-color: #1e3a8a;
             color: white;
-            padding: 8px 16px;
+            padding: 10px 20px;
             border-radius: 5px;
-            margin-top: 10px;
-            font-size: 0.9rem;
+            margin-top: 15px;
+            font-size: 1rem;
             transition: background-color 0.3s;
         }
 
         .tool-card .btn:hover {
-            background-color: #45a049;
+            background-color: #15316b;
         }
 
         /* Footer */
@@ -131,44 +134,7 @@
             color: white;
             text-align: center;
             padding: 20px 0;
-            margin-top: 40px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero {
-                padding: 60px 20px;
-            }
-
-            .hero h2 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .tools-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            .hero h2 {
-                font-size: 1.8rem;
-            }
-
-            .tool-card h3 {
-                font-size: 1.3rem;
-            }
-
-            .tool-card p {
-                font-size: 0.9rem;
-            }
+            margin-top: 60px;
         }
     </style>
 </head>
@@ -180,50 +146,45 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h2>Simplify Your Workflow</h2>
-        <p>Explore our collection of online tools for image compression, PDF editing, and more.</p>
-        <a href="/imagecompress/img.html" class="btn">Get Started</a>
+        <h2>Empower Your Productivity</h2>
+        <p>Access a variety of powerful online tools to streamline your work efficiently.</p>
+        <a href="/imagecompress/img.html" class="btn">Explore Tools</a>
     </section>
 
     <!-- Tools Grid -->
     <section id="tools" class="tools-grid">
-        <!-- Image Compression Tool -->
-       <a href="/imagecompress/img.html" class="tool-card-link">
-    <div class="tool-card">
-        <img src="image-compression.jpg" alt="Image Compression">
-        <div class="content">
-            <h3>Image Compression</h3>
-            <p>Compress and optimize your images for web use with adjustable compression levels.</p>
-            <span class="btn">Use Tool</span>
-        </div>
-      </div>
-       </a>
-
-        <!-- PDF Editor Tool -->
         <div class="tool-card">
-            <img src="pdf-editor.jpg" alt="PDF Editor">
+            <img src="https://source.unsplash.com/400x300/?compress" alt="Image Compression">
+            <div class="content">
+                <h3>Image Compression</h3>
+                <p>Reduce file sizes while maintaining quality.</p>
+                <a href="/imagecompress/img.html" class="btn">Use Tool</a>
+            </div>
+        </div>
+
+        <div class="tool-card">
+            <img src="https://source.unsplash.com/400x300/?pdf" alt="PDF Editor">
             <div class="content">
                 <h3>PDF Editor</h3>
-                <p>Edit, merge, and compress PDF files with ease.</p>
+                <p>Edit, merge, and compress PDFs effortlessly.</p>
                 <a href="/pdf-editor" class="btn">Use Tool</a>
             </div>
         </div>
 
-        <!-- Add more tools here -->
         <div class="tool-card">
-            <img src="image-converter.jpg" alt="Image Converter">
+            <img src="https://source.unsplash.com/400x300/?convert" alt="Image Converter">
             <div class="content">
                 <h3>Image Converter</h3>
-                <p>Convert images to different formats like JPG, PNG, and more.</p>
+                <p>Convert images to various formats instantly.</p>
                 <a href="/image-converter" class="btn">Use Tool</a>
             </div>
         </div>
 
         <div class="tool-card">
-            <img src="pdf-converter.jpg" alt="PDF Converter">
+            <img src="https://source.unsplash.com/400x300/?file" alt="PDF Converter">
             <div class="content">
                 <h3>PDF Converter</h3>
-                <p>Convert PDFs to Word, Excel, or other formats.</p>
+                <p>Transform PDFs into different formats with ease.</p>
                 <a href="/pdf-converter" class="btn">Use Tool</a>
             </div>
         </div>
@@ -231,7 +192,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2023 Online Tools. All rights reserved.</p>
+        <p>&copy; 2024 Online Tools. All rights reserved.</p>
     </footer>
 </body>
 </html>
