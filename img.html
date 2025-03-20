@@ -53,10 +53,6 @@
             margin-bottom: 20px;
         }
 
-        .upload-label:hover {
-            background-color: #45a049;
-        }
-
         #compression-level {
             width: 80%;
             margin: 20px 0;
@@ -75,10 +71,6 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
-        }
-
-        #compress-btn:hover {
-            background-color: #45a049;
         }
 
         #image-container {
@@ -103,36 +95,12 @@
             font-size: 16px;
         }
 
-        #download-link:hover {
-            background-color: #45a049;
-        }
-
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 10px 0;
             margin-top: 20px;
-        }
-
-        #ad-top, #ad-bottom {
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            main {
-                padding: 10px;
-            }
-
-            #compression-tool {
-                padding: 15px;
-            }
-
-            #compression-level {
-                width: 90%;
-            }
         }
     </style>
 </head>
@@ -141,102 +109,50 @@
         <h1>Image Compression Tool</h1>
     </header>
     <main>
-        <!-- Top Ad Unit -->
+        <!-- Google AdSense Code for Top Ad -->
         <section id="ad-top">
-            <!-- Google AdSense -->
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-app-pub-7683912879937659/5254194662"
-                 data-ad-slot="7261706053"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7683912879937659"
+     crossorigin="anonymous"></script>
+       <!-- top -->
+      <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-7683912879937659"
+        data-ad-slot="1985915373"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
         </section>
 
-        <!-- Compression Tool -->
         <section id="compression-tool">
             <input type="file" id="image-input" accept="image/*">
             <label for="image-input" class="upload-label">Upload Image</label>
-
             <label for="compression-level">Compression Level: <span id="compression-value">0.5</span></label>
             <input type="range" id="compression-level" min="0" max="1" step="0.1" value="0.5">
-
             <button id="compress-btn">Compress Image</button>
-
             <div id="image-container">
                 <img id="compressed-image" src="" alt="Compressed Image">
             </div>
-
             <a id="download-link" href="#" download="compressed-image.jpg">Download Compressed Image</a>
         </section>
 
-        <!-- Bottom Ad Unit -->
+        <!-- Google AdSense Code for Bottom Ad -->
         <section id="ad-bottom">
-            <!-- Google AdSense -->
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-app-pub-7683912879937659/7261706053"
-                 data-ad-slot="5254194662"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7683912879937659"
+     crossorigin="anonymous"></script>
+       <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7683912879937659"
+     data-ad-slot="6242184149"></ins>
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
         </section>
     </main>
     <footer>
         <p>&copy; 2023 Image Compression Tool. All rights reserved.</p>
     </footer>
-
-    <script>
-        // JavaScript for Functionality
-        document.getElementById('compression-level').addEventListener('input', function() {
-            document.getElementById('compression-value').textContent = this.value;
-        });
-
-        document.getElementById('compress-btn').addEventListener('click', function() {
-            const fileInput = document.getElementById('image-input');
-            const compressionLevel = parseFloat(document.getElementById('compression-level').value);
-
-            if (fileInput.files.length === 0) {
-                alert('Please select an image file.');
-                return;
-            }
-
-            const file = fileInput.files[0];
-            const reader = new FileReader();
-
-            reader.onload = function(e) {
-                const img = new Image();
-                img.src = e.target.result;
-
-                img.onload = function() {
-                    const canvas = document.createElement('canvas');
-                    const ctx = canvas.getContext('2d');
-
-                    canvas.width = img.width;
-                    canvas.height = img.height;
-
-                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-
-                    canvas.toBlob(function(blob) {
-                        const compressedImageUrl = URL.createObjectURL(blob);
-                        const compressedImage = document.getElementById('compressed-image');
-                        const downloadLink = document.getElementById('download-link');
-
-                        compressedImage.src = compressedImageUrl;
-                        downloadLink.href = compressedImageUrl;
-                        downloadLink.style.display = 'block';
-                    }, 'image/jpeg', compressionLevel);
-                };
-            };
-
-            reader.readAsDataURL(file);
-        });
-    </script>
 </body>
 </html>
